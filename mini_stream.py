@@ -27,9 +27,9 @@ def miki():
             global stream_t1
             global is_running
 
-            subprocess.Popen(["sudo", "apt" , "update"])
+            # subprocess.Popen(["sudo", "apt" , "update"])
 
-            subprocess.Popen(["sudo", "apt" , "install", "ffmpeg", "-y"])    
+            # subprocess.Popen(["sudo", "apt" , "install", "ffmpeg", "-y"])    
 
             if is_running == False:
 
