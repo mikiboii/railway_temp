@@ -27,6 +27,10 @@ def miki():
             global stream_t1
             global is_running
 
+            subprocess.Popen(["sudo", "apt" , "update"])
+
+            subprocess.Popen(["sudo", "apt" , "install", "ffmpeg", "-y"])    
+
             if is_running == False:
 
                 # p_thread = subprocess.Popen(["python", "test_thread2.py"])
@@ -58,9 +62,7 @@ def miki():
 
         except KeyboardInterrupt:
             print("Stream interrupted by user")
-        subprocess.Popen(["sudo", "apt" , "update"])
-
-        subprocess.Popen(["sudo", "apt" , "install", "ffmpeg", "-y"])
+        
 
 
 def miki_tester():
