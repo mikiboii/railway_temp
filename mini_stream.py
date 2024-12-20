@@ -104,6 +104,7 @@ def stream_restarter():
 
 
             global stream_t1
+            global is_running
 
     
 
@@ -115,7 +116,7 @@ def stream_restarter():
                     p_thread.wait()
                     
 
-                    global is_running
+                    
                     is_running = False
                 except:
                     pass
@@ -132,7 +133,7 @@ def stream_restarter():
                         p_thread.wait()
                        
 
-                        global is_running
+                        # global is_running
                         is_running = False
                     except:
                         pass
@@ -213,6 +214,5 @@ if __name__ == '__main__':
     # server = Server(app.wsgi_app)
     # server.serve(port=5000)
     print("server starting...")
-    # app.run(host="0.0.0.0", port=10000)
-    app.run(debug=True, port=os.getenv("PORT", default=5000))    
+    app.run(host="0.0.0.0", port=10000)
   
